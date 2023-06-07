@@ -435,7 +435,7 @@ FROM first_read
 GROUP BY country, topic
 ORDER BY count_users DESC;
 
---VI/11. Az e-könyvből származő bevétel: 53.120 USD, ami 6.640 db eladását jelenti.
+--VI/11. Az e-könyvből származó bevétel: 53.120 USD, ami 6.640 db eladását jelenti.
 SELECT SUM(price) AS sum_price,
        COUNT(price) AS count_ebook
 FROM purchase
@@ -450,7 +450,7 @@ FROM (SELECT user_id,
       ORDER BY SUM DESC) AS ebook
 WHERE SUM = 8;
 
---VI/13. A videótanfolyamból származő bevétel: 141.360 USD, ami 1.767 db eladását jelenti.
+--VI/13. A videótanfolyamból származó bevétel: 141.360 USD, ami 1.767 db eladását jelenti.
 SELECT SUM(price),
        COUNT(price) AS count_video
 FROM purchase
